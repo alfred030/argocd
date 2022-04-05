@@ -5,7 +5,7 @@ metadata:
     app: covid19
   name: covid19
 spec:
-  replicas: 6
+  replicas: 3
   selector:
     matchLabels:
       app: covid19
