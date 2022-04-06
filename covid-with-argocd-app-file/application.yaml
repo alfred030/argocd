@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: covid19-application ## application name 
+  namespace: argocd ## namespace where you want to deploy the application
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/leonardtia1/argocd.git
+    targetRevision: HEAD ## This is the last commit in the git repository
+    path: covid-with-argocd-app-file ## the path in the repository
+  destination: 
+    server: https://kubernetes.default.svc ## the address if the K8S
+    namespace: tia ## where to create all the configuration
+
+  syncPolicy: ## this is to auto create the namespace 
+    syncOptions:
+    - CreateNamespace=true
+
+    automated: ## this is to auto sync changes
+      selfHeal: true # to undo manual change in the cluster
+      prune: true ## remove any component in the cluster if we delete it in the repo (any manifest file)

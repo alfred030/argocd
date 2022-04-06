@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: covid19
+  name: covid19
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: covid19
+  template:
+    metadata:
+      labels:
+        app: covid19
+    spec:
+      containers:
+      - image: leonardtia/devops-pro-repos:covid19
+        name: covid19
