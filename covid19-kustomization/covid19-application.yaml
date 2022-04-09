@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argo-covid19-project
+  name: argo-covid19-app
   namespace: argocd
 spec:
   project: argo-covid19-project
