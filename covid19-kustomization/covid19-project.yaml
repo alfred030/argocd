@@ -4,8 +4,6 @@ metadata:
   name: argo-covid19-project
   namespace: argocd
   # Finalizer that ensures that project is not deleted until it is not referenced by any application
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   description: Covid 19 Application
   sourceRepos:

@@ -3,8 +3,6 @@ kind: Application
 metadata:
   name: argo-covid19-project
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   project: argo-covid19-project
   source:
