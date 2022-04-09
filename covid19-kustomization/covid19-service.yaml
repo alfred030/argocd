@@ -4,7 +4,6 @@ metadata:
   labels:
     app: covid19
   name: covid19
-  namespace: covid19-app
 spec:
   ports:
   - port: 80
