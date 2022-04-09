@@ -1,0 +1,3 @@
+resources:
+  - covid19-project.yaml
+  - covid19-application.yaml
